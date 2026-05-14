@@ -1,21 +1,21 @@
 # Azure Migration Project - Entry Level
 
-## Overview
+##  📋 Overview
 This project demonstrates discovering and assessing on-premises VMs (VMware) for Azure migration using **Azure Migrate** service.
 
-## What I Built
+## ✅ What I Built
 - Discovered VMware VMs using Azure Migrate Appliance
 - Assessed VMs for Azure readiness
 - Generated migration recommendations
 - Created Azure VM from assessment
 
-## Technologies Used
+## 📍Technologies Used
 - Azure Migrate (Discovery and Assessment)
 - Azure Portal
 - Azure CLI
 - Azure VM (Standard B2s)
 
-## Project Steps
+## 📍 Project Steps
 
 ### 1. Setup Azure Migrate (Portal)
 ```
@@ -63,12 +63,12 @@ This script deploys Azure VM based on assessment
   ✓ Monthly cost
 ```
 
-## Files in Project
+## 📍Files in Project
 - `deploy-vm.sh` - Azure CLI script to deploy test VM
 - `discover-vms.sh` - List discovered VMs from Azure Migrate
 - `assessment-report.sh` - Pull assessment data
 
-## How to Use
+## 📍How to Use
 
 ### Step 1: Login to Azure
 ```bash
@@ -96,30 +96,9 @@ bash scripts/deploy-vm.sh
 bash scripts/assessment-report.sh
 ```
 
-## What I Learned
+## 📚What I Learned
 - How Azure Migrate discovers on-premises infrastructure
 - How to assess VMs for cloud readiness
 - How to use Azure CLI for automation
 - Cost analysis before migration
 - Azure VM sizing recommendations
-
-## Entry Level Approach
-✓ Simple scripts - only essential parameters
-✓ No complex scripting - use portal for detailed config
-✓ Focus on understanding concepts
-✓ Real Azure resources - all automated
-✓ Clear steps - anyone can follow
-
-## Resources Used
-- Azure Migrate documentation
-- Azure CLI reference
-- AZ-104 knowledge (Virtual Machines, Assessment)
-- AZ-900 concepts (Infrastructure, Cloud Services)
-
-## Time to Complete: ~1-2 weeks
-(Depends on Azure Migrate discovery time)
-
-## Next Steps
-- Configure replication for actual migration
-- Test failover to Azure
-- Optimize post-migration resources

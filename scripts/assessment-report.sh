@@ -6,7 +6,7 @@
 set -e
 
 # Variables
-SUBSCRIPTION_ID="YOUR_SUBSCRIPTION_ID"
+SUBSCRIPTION_ID="********************"
 RESOURCE_GROUP="rg-migration"
 
 echo "======================================"
