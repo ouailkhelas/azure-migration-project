@@ -1,4 +1,4 @@
-# Azure Migration Project - Entry Level
+# Azure Migration Project
 
 ##  📋 Overview
 This project demonstrates discovering and assessing on-premises VMs (VMware) for Azure migration using **Azure Migrate** service.
