@@ -1,11 +1,7 @@
 #!/bin/bash
 
-# Azure Migration Project - Deploy Test VM
-# This script creates a simple Azure VM to test migration readiness
-
 set -e
 
-# Variables - CHANGE THESE
 SUBSCRIPTION_ID="********************"
 RESOURCE_GROUP="rg-migration"
 VM_NAME="migrated-vm-01"
@@ -18,17 +14,14 @@ echo "======================================"
 echo "Azure Migration - Deploy Test VM"
 echo "======================================"
 
-# Step 1: Login
 echo ""
 echo "[1] Login to Azure..."
 az login
 
-# Step 2: Set subscription
 echo ""
 echo "[2] Set subscription..."
 az account set --subscription $SUBSCRIPTION_ID
 
-# Step 3: Create resource group
 echo ""
 echo "[3] Creating resource group: $RESOURCE_GROUP"
 az group create \
@@ -45,14 +38,12 @@ az network vnet create \
   --subnet-name subnet-default \
   --subnet-prefix 10.0.1.0/24
 
-# Step 5: Create Network Security Group
 echo ""
 echo "[5] Creating Network Security Group..."
 az network nsg create \
   --resource-group $RESOURCE_GROUP \
   --name nsg-migration
 
-# Step 6: Add NSG rules
 echo ""
 echo "[6] Adding NSG rules..."
 az network nsg rule create \
@@ -67,7 +58,6 @@ az network nsg rule create \
   --protocol Tcp \
   --destination-port-ranges 22
 
-# Step 7: Create NIC
 echo ""
 echo "[7] Creating Network Interface..."
 az network nic create \
@@ -77,7 +67,6 @@ az network nic create \
   --subnet subnet-default \
   --network-security-group nsg-migration
 
-# Step 8: Create VM
 echo ""
 echo "[8] Creating Virtual Machine..."
 echo "    Name: $VM_NAME"
@@ -94,7 +83,6 @@ az vm create \
   --generate-ssh-keys \
   --public-ip-sku Standard
 
-# Step 9: Summary
 echo ""
 echo "======================================"
 echo "✓ VM Deployed Successfully!"
